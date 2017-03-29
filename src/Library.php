@@ -28,6 +28,8 @@ class Library
             return sha1($data['amount'] . Doku::$mallId . Doku::$sharedKey . $data['invoice'] . $data['currency'] . $data['token'] . $data['pairing_code']);
         } else if (!empty($data['currency'])) {
             return sha1($data['amount'] . Doku::$mallId . Doku::$sharedKey . $data['invoice'] . $data['currency']);
+        } else if (!empty($data['resultmsg']) && !empty($data['edustatus'])) {
+            return sha1($data['amount'] . Doku::$mallId . Doku::$sharedKey . $data['invoice'] . $data['resultmsg'] . $data['edustatus']);
         } else {
             return sha1($data['amount'] . Doku::$mallId . Doku::$sharedKey . $data['invoice']);
         }

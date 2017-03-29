@@ -20,7 +20,7 @@ class Api
     {
         $data['req_basket'] = Library::formatBasket($data['req_basket']);
 
-        return self::getResponse(Doku::prePaymentUrl, $data);
+        return self::getResponse(Doku::getPrePaymentUrl(), $data);
     }
 
     /**
@@ -31,7 +31,7 @@ class Api
     {
         $data['req_basket'] = Library::formatBasket($data['req_basket']);
 
-        return self::getResponse(Doku::paymentUrl, $data);
+        return self::getResponse(Doku::getPaymentUrl(), $data);
     }
 
     /**
@@ -40,7 +40,7 @@ class Api
      */
     public static function directPayment($data)
     {
-        return self::getResponse(Doku::directPaymentUrl, $data);
+        return self::getResponse(Doku::getDirectPaymentUrl(), $data);
     }
 
     /**
@@ -49,7 +49,7 @@ class Api
      */
     public static function generatePaycode($data)
     {
-        return self::getResponse(Doku::generateCodeUrl, $data);
+        return self::getResponse(Doku::ggetGenerateCodeUrl(), $data);
     }
 
     /**
