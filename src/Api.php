@@ -49,7 +49,7 @@ class Api
      */
     public static function generatePaycode($data)
     {
-        return self::getResponse(Doku::ggetGenerateCodeUrl(), $data);
+        return self::getResponse(Doku::getGenerateCodeUrl(), $data);
     }
 
     /**

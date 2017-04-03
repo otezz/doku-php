@@ -28,25 +28,25 @@ class Doku
 
     public static function getPrePaymentUrl()
     {
-        return Doku_Initiate::$isProduction ?
-            Doku_Initiate::prePaymentUrl : Doku_Initiate::sandboxPrePaymentUrl;
+        return Doku::$isProduction ?
+            Doku::prePaymentUrl : Doku::sandboxPrePaymentUrl;
     }
 
     public static function getPaymentUrl()
     {
-        return Doku_Initiate::$isProduction ?
-            Doku_Initiate::paymentUrl : Doku_Initiate::sandboxPaymentUrl;
+        return Doku::$isProduction ?
+            Doku::paymentUrl : Doku::sandboxPaymentUrl;
     }
 
     public static function getDirectPaymentUrl()
     {
-        return Doku_Initiate::$isProduction ?
-            Doku_Initiate::sandboxDirectPaymentUrl : Doku_Initiate::directPaymentUrl;
+        return Doku::$isProduction ?
+            Doku::directPaymentUrl : Doku::sandboxDirectPaymentUrl;
     }
 
     public static function getGenerateCodeUrl()
     {
-        return Doku_Initiate::$isProduction ?
-            Doku_Initiate::sandboxGenerateCodeUrl : Doku_Initiate::generateCodeUrl;
+        return Doku::$isProduction ?
+            Doku::generateCodeUrl : Doku::sandboxGenerateCodeUrl;
     }
 }
